@@ -15,5 +15,9 @@ for idx in saldo_anterior_index:
         # Eliminar la fila de "Saldo Anterior", las 4 superiores y las 2 inferiores
         df.drop(df.index[idx-4:idx+2], inplace=True)
 
-# Guardar el DataFrame modificado si es necesario
+# Eliminar todas las filas donde diga "Saldo Anterior" en la columna B
+df = df[df[columna_b] != 'Saldo Anterior']
+
+# Guardar el DataFrame modificado
 df.to_excel("cta_cte_modificado.xlsx", index=False)
+
