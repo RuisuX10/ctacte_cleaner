@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Cargar el DataFrame
+# Cargar el DataFrame.
 df = pd.read_excel("cta_cte.xlsx", sheet_name="Sheet1")
 
 # Obtener el nombre de la segunda columna
